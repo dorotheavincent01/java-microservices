@@ -36,7 +36,7 @@ import java.util.stream.Collectors;
 @EnableDiscoveryClient
 @EnableZuulProxy
 @SpringBootApplication
-@EnableEurekaClient
+//@EnableEurekaClient
 public class ApiGatewayApplication {
 
     public static void main(String[] args) {
@@ -122,9 +122,7 @@ class CoolCarController {
     }
 
     private boolean isCool(Car car) {
-        return !car.getName().equals("AMC Gremlin") &&
-                !car.getName().equals("Triumph Stag") &&
-                !car.getName().equals("Ford Pinto") &&
-                !car.getName().equals("Yugo GV");
+        return !car.getName().equals("Honda City") &&
+                !car.getName().equals("BMW");
     }
 }
